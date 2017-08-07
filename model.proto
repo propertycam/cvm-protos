@@ -6,14 +6,14 @@ package cvm;
 service Model {
 
     // Predict output based on given input
-    rpc Predict(PredictionRequest) returns (PredictionResponse){}
+    rpc Predict(PredictInput) returns (PredictOutput){}
 }
 
-message PredictionRequest {
+message PredictInput {
     string image_url = 1;
 }
 
-message PredictionResponse {
+message PredictOutput {
     Concept concept = 1;
 }
 
