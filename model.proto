@@ -8,3 +8,16 @@ service Model {
     // Predict output based on given input
     rpc Predict(PredictionRequest) returns (PredictionResponse){}
 }
+
+message PredictionRequest {
+    string image_url = 1;
+}
+
+message PredictionResponse {
+    Concept concept = 1;
+}
+
+message Concept {
+    string name = 1;
+    float score = 2;
+}
