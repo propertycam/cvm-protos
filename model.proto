@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package cvm;
+
+// Machine learning based model service definition
+service Model {
+
+    // Predict output based on given input
+    rpc Predict(PredictionRequest) returns (PredictionResponse){}
+}
