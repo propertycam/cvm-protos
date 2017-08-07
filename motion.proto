@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package cvm;
+
+// Motion detection service definition
+service Motion {
+
+    // Detects
+    rpc Detect(FrameUrl) returns (DetectResult){}
+}
